@@ -9,6 +9,7 @@ public class Shaker {
 	public static final double FRAMES = 0.0075;
 
 	public static ArrayList<Point> detect(ArrayList<Point> points){
+		if(points.size() <= 2) return null;
 		ArrayList<Point> filtered_peaks = FilterPeaks(FindPeaks(points));
 		Frame largest_frame = LargestFrame(FrequencyFrames(filtered_peaks));
 		if(largest_frame == null) return null;
@@ -66,7 +67,7 @@ public class Shaker {
 				if(freq > FRAMES) frames.add(new Frame(start, end));
 			}
 		
-		return frames.size() == 0 ? null : frames;
+		return frames;
 	}
 	private static Frame LargestFrame(ArrayList<Frame> frames){
 		if(frames.size() == 0) return null;

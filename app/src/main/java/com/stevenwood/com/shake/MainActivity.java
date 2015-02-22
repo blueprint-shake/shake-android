@@ -116,7 +116,7 @@ public class MainActivity extends ActionBarActivity implements SensorEventListen
                 int  phoneIndex =cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
                 phoneNo = cursor.getString(phoneIndex);
                 currentContact.setPhoneNumber(phoneNo);
-                int  phoneIndex =cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
+                //int  phoneIndex =cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
 
            }
         }
@@ -178,7 +178,7 @@ public class MainActivity extends ActionBarActivity implements SensorEventListen
 
             ArrayList<Point> peaks = Shaker.detect(acc);
             if (peaks != null) {
-                Log.d(TAG, "SHAKE");
+                new SendAccel().execute();
                 acc.clear();
             }
         }

@@ -1,4 +1,4 @@
-package Acceleration;
+package com.stevenwood.com.shake.Util.Acceleration;
 
 public class Frame {
 

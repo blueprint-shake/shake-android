@@ -23,9 +23,9 @@ public class Shaker {
 			Point point = points.get(i);
 			Point last = points.get(i-1);
 			Point next = points.get(i+1);
-			if(last.getMagnitude() < point.getMagnitude() && next.getMagnitude() < point.getMagnitude())
+			if(last.getMagnitude() <= point.getMagnitude() && next.getMagnitude() <= point.getMagnitude())
 				peaks.add(point);
-			if(last.getMagnitude() > point.getMagnitude() && next.getMagnitude() > point.getMagnitude())
+			if(last.getMagnitude() >= point.getMagnitude() && next.getMagnitude() >= point.getMagnitude())
 				peaks.add(point);
 		}
 		
@@ -53,7 +53,9 @@ public class Shaker {
 		return filtered;
 	}
 	private static double FilterPeakChange(Point p1, Point p2){
-		return (p2.getMagnitude()-p1.getMagnitude()) / (p2.getTimestamp()-p1.getTimestamp());
+		long difftime = p2.getTimestamp()-p1.getTimestamp();
+		if(difftime == 0) return 0.;
+		return (p2.getMagnitude()-p1.getMagnitude()) / difftime;
 	}
 	private static ArrayList<Frame> FrequencyFrames(ArrayList<Point> peaks){
 		ArrayList<Frame> frames = new ArrayList<Frame>();

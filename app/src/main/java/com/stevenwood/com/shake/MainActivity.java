@@ -162,7 +162,7 @@ public class MainActivity extends ActionBarActivity implements SensorEventListen
         while(now - acc.get(0).getTimestamp() > 1000*2) acc.remove(0);
     }
 
-    ArrayList<Point> peaks;
+    ArrayList<Point> peaks = new ArrayList<Point>();
     @Override
     public void onSensorChanged(SensorEvent event) {
         Sensor eventSensor = event.sensor;
@@ -176,7 +176,7 @@ public class MainActivity extends ActionBarActivity implements SensorEventListen
             acc.add(new Point(x, y, z, time));
             cleanAcc();
 
-            ArrayList<Point> peaks = Shaker.detect(acc);
+            peaks = Shaker.detect(acc);
             if (peaks != null) {
                 new SendAccel().execute();
                 acc.clear();
@@ -231,7 +231,8 @@ public class MainActivity extends ActionBarActivity implements SensorEventListen
                         .value("logger.log").key("string").value(peaks).endObject();
                 StringEntity entity = new StringEntity(vm.toString());
 
-                httppost.setEntity(entity);
+                //httppost.setEntity(entity);
+                Log.v(TAG, "REACH: "+vm.toString());
 
                 // Execute HTTP Post Request
                 HttpResponse response = httpclient.execute(httppost);
@@ -245,11 +246,12 @@ public class MainActivity extends ActionBarActivity implements SensorEventListen
                 }
                 reader.close();
                 String result11 = sb.toString();
-                Log.v(TAG, result11);
+                Log.v(TAG, "RESULT: "+result11);
                 return result11;
                 // parsing data
                // return new JSONArray(result11);
             } catch (Exception e) {
+                Log.v(TAG, "ERROR");
                 e.printStackTrace();
                 return null;
             }

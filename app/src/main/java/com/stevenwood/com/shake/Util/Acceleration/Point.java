@@ -1,4 +1,4 @@
-package com.stevenwood.com.shake.Util.Acceleration;
+package Acceleration;
 
 public class Point {
 
@@ -22,7 +22,7 @@ public class Point {
 	}
 	
 	public String toString(){
-		return "{mag="+mag+", time="+time+"}";
+		return "{mag:"+mag+", time:"+time+"}";
 	}
 	
 }

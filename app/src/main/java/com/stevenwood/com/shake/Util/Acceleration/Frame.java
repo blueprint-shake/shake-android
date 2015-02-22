@@ -1,4 +1,4 @@
-package com.stevenwood.com.shake.Util.Acceleration;
+package Acceleration;
 
 public class Frame {
 
@@ -18,7 +18,7 @@ public class Frame {
 	}
 	
 	public String toString(){
-		return "{end="+end+", start="+start+"}";
+		return "{end:"+end+", start:"+start+"}";
 	}
 	
 }

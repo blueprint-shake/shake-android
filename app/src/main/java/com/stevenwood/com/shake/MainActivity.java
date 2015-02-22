@@ -1,12 +1,15 @@
 package com.stevenwood.com.shake;
 
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity implements SensorEventListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,5 +38,20 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onSensorChanged(SensorEvent event) {
+        Sensor eventSensor = event.sensor;
+        if(eventSensor.getType() == Sensor.TYPE_ACCELEROMETER){
+            float x = event.values[0];
+            float y = event.values[1];
+            float z = event.values[2];
+        }
+    }
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+
     }
 }

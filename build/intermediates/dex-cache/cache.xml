@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Temp\Desktop\Shake\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.6.3.1\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4004d6bce9c9bb95cc8116024ef186d967a01b65">
+        <dex dex="C:\Users\Temp\Desktop\Shake\app\build\intermediates\pre-dexed\debug\classes-90b7d0b854f15278e91e5107eb188f67b33b500d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Temp\Desktop\Shake\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\Temp\Desktop\Shake\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-8b5c1bc3a56904aeb17431e951174124aa7bff97.jar" />
+    </item>
+    <item
+        jar="C:\Users\Temp\Desktop\Shake\app\build\intermediates\exploded-aar\com.github.navasmdc\MaterialDesign\1.4\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="87405405e403de68f4057757b8a2e8de02bd65d0">
+        <dex dex="C:\Users\Temp\Desktop\Shake\app\build\intermediates\pre-dexed\debug\classes-ba1baf55108acd6dc2bfdcef80eb30ab83794d6a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Temp\Desktop\Programming\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="C:\Users\Temp\Desktop\Shake\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-2dabe82693948a73995604bbe86c3932e4a006b9.jar" />
+    </item>
+    <item
+        jar="C:\Users\Temp\Desktop\Shake\app\build\intermediates\exploded-aar\com.nispok\snackbar\2.9.1\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e616883bd2cc1ee2618d8c9b01346a3afe5e7633">
+        <dex dex="C:\Users\Temp\Desktop\Shake\app\build\intermediates\pre-dexed\debug\classes-a52fa6957d15d5f875ef4f57eb372c106781e240.jar" />
+    </item>
+    <item
+        jar="C:\Users\Temp\Desktop\Shake\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\Users\Temp\Desktop\Shake\app\build\intermediates\pre-dexed\debug\classes-01c5ae03e760f8b1b41bd178a86cf4a9b3ff5013.jar" />
+    </item>
+    <item
+        jar="C:\Users\Temp\Desktop\Shake\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\Temp\Desktop\Shake\app\build\intermediates\pre-dexed\debug\classes-c4e1b6950168ee569669e7cb685fb14a87f15fdb.jar" />
+    </item>
+
+</items>
